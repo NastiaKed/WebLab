@@ -1,148 +1,88 @@
 <!DOCTYPE html>
-<html land="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 1 </title>
-
-    <!-- Rubik -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
-
-    <!-- DM Serif Display -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
-  
-    <!-- Support libs -->
-  <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/reset.min.css">
-  
-  <!-- My styles -->
-  <link rel="stylesheet" href="css/styles.css">
+    <title>Lab4</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
 </head>
-   
 <body>
-    <section class="hero">
-        <div class="container">
-            <header class="header">
-                <div class="header-logo">
-                    <img src="image/logo.svg" alt="Logo">
-                </div>
-        <nav class="header__nav">
-            <ul> 
-                <li class="header__nav-item"><a class="header__nav-link" href="">ABOUT</a></li>
-                <li class="header__nav-item"><a class="header__nav-link" href="">HOW TO</a></li>
-                <li class="header__nav-item"><a class="header__nav-link" href="">FAQS</a></li>
-            </ul>
-        </nav>
-            <button class="header__Contact-us">CONTACT US</button>
-            </header>
-            <div class="container hero__conrainer">
-                <div class="hero__inner">
-                    <h1 class="hero__title">Your awesome traffic permit consultant.</h1>
-                    <button class="hero__button">GET STARTED   
-                        <svg class="union" width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M23.8885 12.355L29.5 6.17749L28.5 5.07664V5.0039H28.4339L23.8885 0L22.4086 1.3464L25.731 5.0039L0 5.0039L0 7.0039L26.0464 7.0039L22.4086 11.0086L23.8885 12.355Z" fill="white"/>
-                            </svg>
-                    </button>
-                    <img class="hero__car" src="image/Car image.svg">
-                </div>
-            </div>
+<header>
+    <div class="left-side">
+        <h1>Table</h1>
+    </div>
+    <div class="search-block">
+        <label for="find-input"></label>
+        <input type="text" id="find-input" placeholder="Search by title...">
+        <button id="find-button">Search</button>
+        <button id="cancel-find-button">Clear</button>
+    </div>
+</header>
+<main>
+    <div class="left-side-cards">
+        <form id="add-card" class="add-card">
+            <h3>Add Table</h3>
+            <label>Name <br>
+                <input type="text" id="name-input">
+            </label>
+            <label>Prise<br>
+                <input type="number" id="volume-input">
+            </label>
+            <label>Weight<br>
+                <input type="number" id="passenger-input">
+            </label>
+            <button type="submit" id="button-submit">
+                Submit
+            </button>
+        </form>
+        <!--        <div class="edit">-->
+        <!--            <label>Find by name <br>-->
+        <!--                <input type="text" id="find-input">-->
+        <!--            </label>-->
+        <!--            <button id="find-button">Find</button>-->
+        <!--            <button id="cancel-find-button">Cancel</button>-->
+        <!--        </div>-->
+        <div class="sort-volume">
+            <h2> Sort by weight </h2>
+            <label>
+                <input type="checkbox" id="checkbox">
+            </label>
         </div>
-    </section>
-    <section class="intro">
-        <div class="container">
-            <div class="intro__inner">
-                <h6 class="intro__title">ABOUT US</h6>
-                <p class="intro__paragraph">
-                    The occupational traffic permit is one of 
-                    the most important things in the company when 
-                    carrying out freight transport.  In fact, it is a 
-                    prerequisite for doing business traffic at all. </p>
-                    <div class="intro__paragraph2">
-                        <img src="image/Rectangle 18.svg" alt="Line">
-                        <p class="text">How do you do when you need to obtain 
-                            a commercial traffic permit for freight 
-                            transport to your business?</p>
-                    </div>
-            </div>
-            <img src="image/Illustration1.svg" alt="Illustration1">
+        <div class="count-amount">
+            <h2>Count</h2>
+            <button id="count-fuel-button">Calculate by price</button>
+            <p id="count-output"></p>
         </div>
-    </section>
-    <section class="intro2">
-        <div class="container">
-            <img src="image/Group1934.svg" alt="illustrations">
-            <div class="intro2__inner">
-                <h6 class="intro2__title">How to apply</h6>
-                <p class="intro2__paragraph">
-                    When applying for a traffic permit, there are 
-                    certain requirements that you must meet that are 
-                    included in the examination: requirements for professional 
-                    knowledge, solid establishment, good reputation and 
-                    financial resources. Important to remember is to confirm 
-                    your application for a traffic permit by the company's 
-                    company signer or CEO.</p>
-            </div>
-        </div>
-    </section>
-    <section class="intro3">
-        <div class="container">
-            <div class="intro3__inner">
-                <h4 class="intro3__title">ABOUT US</h4>
-                <h3 class="intro3__info">Out Awesome Clients</h3>
-                <div class="intro3__wiget">
-                    <div class="intro3__wiget1">
-                        <p class="intro3__paragraph1">Yes, you will need to have the land 
-                        owner sign the permit application as the Permittee, and you sign 
-                        the permit as the Applicant or Agent for the Permittee.</p>
-                        <div class="intro3__fb1">
-                            <img class="intro3__photo1" src="./image/Ellipse 9.svg" alt="Ellipse 9">
-                            <p class="intro3__name1">Isak Pettersson</p>
-                        </div>
-                    </div>
-                    <div class="intro3__wiget2">
-                        <p class="intro3__paragraph2">From most barricade or traffic control 
-                        companies located in the phone book. They employ certified Traffic 
-                        Control Supervisors (TCS) who can generate and certify the traffic 
-                        control plan. </p>
-                        <div class="intro3__fb2">
-                            <img class="intro3__photo2" src="./image/Ellipse 8.svg" alt="Ellipse 8">
-                            <p class="intro3__name2">Simon Sandberg</p>
-                        </div>
-                    </div>
-                    <div class="intro3__wiget3">
-                        <p class="intro3__paragraph3">An A-Line, or access restriction deed is 
-                        a property right that has been obtained by CDOT for the sole purpose 
-                        of prohibiting direct</p>
-                        <div class="intro3__fb3">
-                            <img class="intro3__photo3" src="./image/Ellipse 7.svg" alt="Ellipse 7">
-                            <p class="intro3__name3">Isak Pettersson</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="bottom__line">
-        <div class="container">
-            <p class="url">Copyright @ 2019</p>
-            <svg class="logo" width="212" height="50" viewBox="0 0 212 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M79.992 41V40.68L81.304 40.36C82.1787 40.168 82.616 39.6346 82.616 38.76V20.52H79.896C79.1067 20.52 78.5413 20.7333 78.2 21.16C77.8587 21.5653 77.496 22.1306 77.112 22.856L75.96 25.096H75.64L75.8 19.88H94.264L94.392 25.096H94.072L92.92 22.856C92.5573 22.1306 92.2053 21.5653 91.864 21.16C91.5227 20.7333 90.9573 20.52 90.168 20.52H87.448V38.76C87.448 39.6346 87.8853 40.168 88.76 40.36L90.072 40.68V41H79.992ZM95.7665 41V40.68L96.4385 40.456C96.8652 40.3066 97.1425 40.1146 97.2705 39.88C97.3985 39.624 97.4625 39.272 97.4625 38.824V22.088C97.4625 21.6613 97.3985 21.3306 97.2705 21.096C97.1638 20.84 96.9078 20.6373 96.5025 20.488L95.7665 20.2V19.88H104.919C107.436 19.88 109.367 20.36 110.711 21.32C112.055 22.2586 112.727 23.5706 112.727 25.256C112.727 26.1946 112.375 27.1333 111.671 28.072C110.967 29.0106 109.857 29.736 108.343 30.248L112.791 39.08C112.983 39.4426 113.196 39.7413 113.431 39.976C113.687 40.1893 114.017 40.3813 114.423 40.552L114.839 40.712V41H109.111L104.375 30.92H102.199V38.824C102.199 39.2293 102.263 39.56 102.391 39.816C102.519 40.072 102.785 40.264 103.191 40.392L103.959 40.68V41H95.7665ZM102.199 30.28H103.735C105.271 30.28 106.38 29.8746 107.063 29.064C107.745 28.232 108.087 27.0053 108.087 25.384C108.087 23.7413 107.767 22.5253 107.127 21.736C106.487 20.9253 105.409 20.52 103.895 20.52H102.199V30.28ZM115.725 41V40.68L116.525 40.392C116.951 40.2213 117.282 40.0186 117.517 39.784C117.751 39.528 117.943 39.176 118.093 38.728L124.685 19.816H127.405L133.901 38.856C134.071 39.3253 134.263 39.688 134.477 39.944C134.69 40.1786 135.021 40.3813 135.469 40.552L135.853 40.68V41H127.725V40.68L128.205 40.52C128.653 40.3493 128.919 40.1146 129.005 39.816C129.111 39.496 129.101 39.1226 128.973 38.696L127.469 34.088H120.365L118.829 38.6C118.679 39.0693 118.626 39.4426 118.669 39.72C118.733 39.9973 118.989 40.2213 119.437 40.392L120.141 40.68V41H115.725ZM120.589 33.448H127.277L124.045 23.496L120.589 33.448ZM136.86 41V40.68L137.436 40.488C137.863 40.3386 138.151 40.136 138.3 39.88C138.45 39.624 138.524 39.2826 138.524 38.856C138.546 37.576 138.556 36.2853 138.556 34.984C138.556 33.6826 138.556 32.3813 138.556 31.08V29.8C138.556 28.52 138.556 27.24 138.556 25.96C138.556 24.6586 138.546 23.368 138.524 22.088C138.524 21.6613 138.46 21.32 138.332 21.064C138.226 20.808 137.97 20.6053 137.564 20.456L136.86 20.2V19.88H152.348L152.572 25.192H152.252L150.428 21.832C150.215 21.4266 149.97 21.1066 149.692 20.872C149.415 20.6373 149.031 20.52 148.54 20.52H143.388C143.367 22.0346 143.356 23.5813 143.356 25.16C143.356 26.7386 143.356 28.3066 143.356 29.864H146.684C147.175 29.864 147.538 29.7573 147.772 29.544C148.007 29.3306 148.231 29.0213 148.444 28.616L149.116 27.4H149.436V33H149.116L148.412 31.784C148.199 31.4 147.975 31.0906 147.74 30.856C147.527 30.6213 147.175 30.504 146.684 30.504H143.356C143.356 31.9973 143.356 33.4266 143.356 34.792C143.356 36.136 143.367 37.4586 143.388 38.76C143.388 39.592 143.794 40.136 144.604 40.392L145.564 40.68V41H136.86ZM153.86 41V40.68L154.5 40.424C154.927 40.2746 155.204 40.072 155.332 39.816C155.482 39.56 155.556 39.2186 155.556 38.792V22.088C155.556 21.6613 155.492 21.32 155.364 21.064C155.236 20.808 154.948 20.6053 154.5 20.456L153.86 20.2V19.88H162.084V20.2L161.444 20.456C161.018 20.6053 160.73 20.808 160.58 21.064C160.452 21.32 160.388 21.6613 160.388 22.088V38.792C160.388 39.2186 160.452 39.56 160.58 39.816C160.73 40.0506 161.018 40.2533 161.444 40.424L162.084 40.68V41H153.86ZM173.962 41.576C171.893 41.576 170.015 41.16 168.33 40.328C166.666 39.4746 165.343 38.216 164.362 36.552C163.381 34.888 162.89 32.8506 162.89 30.44C162.89 28.6053 163.189 26.9946 163.786 25.608C164.383 24.2213 165.194 23.0586 166.218 22.12C167.263 21.1813 168.458 20.4773 169.802 20.008C171.167 19.5386 172.607 19.304 174.122 19.304C175.338 19.304 176.458 19.4426 177.482 19.72C178.506 19.9973 179.466 20.3813 180.362 20.872L180.49 24.808H180.17L178.57 22.248C178.357 21.8426 178.122 21.48 177.866 21.16C177.61 20.8186 177.29 20.5626 176.906 20.392C176.586 20.2426 176.266 20.136 175.946 20.072C175.647 19.9866 175.263 19.944 174.794 19.944C173.557 19.944 172.426 20.2746 171.402 20.936C170.399 21.5973 169.589 22.696 168.97 24.232C168.373 25.7466 168.074 27.8266 168.074 30.472C168.074 33.096 168.362 35.176 168.938 36.712C169.514 38.2266 170.293 39.3146 171.274 39.976C172.277 40.616 173.397 40.936 174.634 40.936C175.317 40.936 175.861 40.8933 176.266 40.808C176.671 40.7013 177.077 40.552 177.482 40.36C177.887 40.1893 178.197 39.944 178.41 39.624C178.623 39.2826 178.815 38.92 178.986 38.536L180.394 35.4H180.714L180.618 39.976C179.722 40.4453 178.719 40.8293 177.61 41.128C176.501 41.4266 175.285 41.576 173.962 41.576ZM192.064 41.576C190.762 41.576 189.504 41.3413 188.288 40.872C187.093 40.4026 186.016 39.7093 185.056 38.792C184.117 37.8533 183.37 36.6906 182.816 35.304C182.261 33.9173 181.984 32.296 181.984 30.44C181.984 28.6053 182.261 26.9946 182.816 25.608C183.37 24.2213 184.128 23.0693 185.088 22.152C186.048 21.2133 187.125 20.5093 188.32 20.04C189.536 19.5493 190.784 19.304 192.064 19.304C193.365 19.304 194.613 19.5386 195.808 20.008C197.024 20.456 198.101 21.1493 199.04 22.088C200 23.0053 200.757 24.168 201.312 25.576C201.866 26.9626 202.144 28.584 202.144 30.44C202.144 32.2533 201.866 33.864 201.312 35.272C200.757 36.6586 200 37.8213 199.04 38.76C198.101 39.6773 197.024 40.3813 195.808 40.872C194.613 41.3413 193.365 41.576 192.064 41.576ZM192.064 40.904C193.237 40.904 194.186 40.5946 194.912 39.976C195.637 39.336 196.16 38.2586 196.48 36.744C196.821 35.208 196.992 33.1066 196.992 30.44C196.992 27.752 196.821 25.6506 196.48 24.136C196.16 22.6 195.637 21.5226 194.912 20.904C194.186 20.264 193.237 19.944 192.064 19.944C190.912 19.944 189.973 20.264 189.248 20.904C188.522 21.5226 187.989 22.6 187.648 24.136C187.328 25.6506 187.168 27.752 187.168 30.44C187.168 33.1066 187.328 35.208 187.648 36.744C187.989 38.2586 188.522 39.336 189.248 39.976C189.973 40.5946 190.912 40.904 192.064 40.904ZM206.488 41.48C205.72 41.48 205.069 41.2133 204.536 40.68C204.002 40.1466 203.736 39.5066 203.736 38.76C203.736 38.0133 204.002 37.3626 204.536 36.808C205.069 36.2533 205.72 35.976 206.488 35.976C207.256 35.976 207.906 36.2533 208.44 36.808C208.973 37.3626 209.24 38.0133 209.24 38.76C209.24 39.5066 208.973 40.1466 208.44 40.68C207.906 41.2133 207.256 41.48 206.488 41.48Z" fill="white"/>
-                <path opacity="0.4" d="M-1.90735e-06 17L16 17L16 1.90735e-06L-1.90735e-06 17Z" fill="white"/>
-                <path d="M47 17H16V50L47 17Z" fill="white"/>
-            </svg>
-            <svg class="sm" width="170" height="36" viewBox="0 0 170 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="85" cy="18" r="18" fill="white"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M84.9095 14.6592L84.8699 14.0076C84.7511 12.3187 85.7938 10.7761 87.4438 10.1777C88.051 9.96492 89.0805 9.93832 89.7537 10.1245C90.0176 10.2043 90.5193 10.4702 90.8756 10.7096L91.5224 11.1485L92.2351 10.9224C92.6311 10.8027 93.1591 10.6032 93.3966 10.4702C93.621 10.3506 93.819 10.284 93.819 10.324C93.819 10.55 93.3307 11.3213 92.9215 11.7468C92.3671 12.3453 92.5255 12.3985 93.6475 11.9995C94.3206 11.7734 94.3338 11.7734 94.2018 12.0261C94.1226 12.1591 93.7134 12.6245 93.2778 13.0501C92.5387 13.7815 92.4991 13.8613 92.4991 14.473C92.4991 15.4172 92.0503 17.3853 91.6015 18.4624C90.77 20.4838 88.9881 22.5715 87.2062 23.6221C84.6984 25.0982 81.3589 25.4705 78.5475 24.6062C77.6103 24.3136 76 23.5689 76 23.436C76 23.396 76.4883 23.3428 77.0824 23.3296C78.3231 23.303 79.5638 22.9572 80.6197 22.3455L81.3326 21.92L80.5141 21.6407C79.3526 21.2417 78.3099 20.3242 78.0459 19.4598C77.9667 19.1805 77.9931 19.1672 78.7322 19.1672L79.4978 19.1539L78.851 18.8481C78.0855 18.4624 77.3859 17.8108 77.0427 17.1459C76.7919 16.6672 76.4752 15.457 76.5676 15.364C76.5939 15.3241 76.8712 15.4038 77.188 15.5102C78.0987 15.8427 78.2175 15.7629 77.6895 15.2044C76.6995 14.1937 76.396 12.691 76.8712 11.2681L77.0956 10.6298L77.9667 11.4942C79.7486 13.2362 81.8473 14.2735 84.2496 14.5794L84.9095 14.6592Z" fill="#ED4D47"/>
-                <circle cx="152" cy="18" r="18" fill="white"/>
-                <path d="M152.002 13.8978C149.732 13.8978 147.901 15.7293 147.901 18C147.901 20.2707 149.732 22.1022 152.002 22.1022C154.272 22.1022 156.103 20.2707 156.103 18C156.103 15.7293 154.272 13.8978 152.002 13.8978ZM152.002 20.667C150.535 20.667 149.335 19.4709 149.335 18C149.335 16.5291 150.531 15.333 152.002 15.333C153.472 15.333 154.668 16.5291 154.668 18C154.668 19.4709 153.469 20.667 152.002 20.667ZM157.227 13.73C157.227 14.262 156.799 14.6868 156.271 14.6868C155.739 14.6868 155.314 14.2584 155.314 13.73C155.314 13.2016 155.743 12.7732 156.271 12.7732C156.799 12.7732 157.227 13.2016 157.227 13.73ZM159.944 14.7011C159.883 13.4194 159.59 12.2841 158.652 11.3487C157.716 10.4133 156.581 10.1205 155.3 10.0562C153.979 9.98126 150.021 9.98126 148.7 10.0562C147.422 10.1169 146.287 10.4097 145.348 11.3451C144.41 12.2805 144.12 13.4158 144.056 14.6975C143.981 16.0185 143.981 19.9779 144.056 21.2989C144.117 22.5806 144.41 23.7159 145.348 24.6513C146.287 25.5867 147.419 25.8795 148.7 25.9438C150.021 26.0187 153.979 26.0187 155.3 25.9438C156.581 25.8831 157.716 25.5903 158.652 24.6513C159.587 23.7159 159.88 22.5806 159.944 21.2989C160.019 19.9779 160.019 16.0221 159.944 14.7011ZM158.238 22.7163C157.959 23.416 157.42 23.9551 156.717 24.2372C155.664 24.6549 153.165 24.5585 152.002 24.5585C150.838 24.5585 148.336 24.6513 147.287 24.2372C146.587 23.9587 146.048 23.4196 145.766 22.7163C145.348 21.6631 145.445 19.1639 145.445 18C145.445 16.8361 145.352 14.3334 145.766 13.2837C146.044 12.584 146.583 12.0449 147.287 11.7628C148.34 11.3451 150.838 11.4415 152.002 11.4415C153.165 11.4415 155.668 11.3487 156.717 11.7628C157.417 12.0413 157.956 12.5804 158.238 13.2837C158.655 14.3369 158.559 16.8361 158.559 18C158.559 19.1639 158.655 21.6666 158.238 22.7163Z" fill="#ED4D47"/>
-                <circle cx="18" cy="18" r="18" fill="white"/>
-                <path d="M19.37 28.4882V18.2429H22.2041L22.5796 14.7123H19.37L19.3749 12.9452C19.3749 12.0244 19.4625 11.531 20.7879 11.531H22.5596V8H19.7251C16.3205 8 15.1222 9.71271 15.1222 12.593V14.7127H13V18.2433H15.1222V28.4882H19.37Z" fill="#ED4D47"/>
-            </svg>
-        </div>
-    </section>
-</body>
+    </div>
+    <div class="show-list">
+        <ul id="items-to-list" class="items-to-list">
 
+        </ul>
+    </div>
+</main>
+<div class="container">
+    <div class="edit-container" id="edit-container" style="display: none">
+        <div class="edit_table">
+            <h2 class="edit_title">Edit Table</h2>
+            <div class="input_content">
+                <div class="inputs">
+                    <label for="edit_input">Name</label>
+                    <input id="edit_input" class="edit_input" type="text" placeholder="Text...">
+                </div>
+                <div class="inputs">
+                    <label for="edit_volume">Price</label>
+                    <input type="number" id="edit_volume">
+                </div>
+                <div class="inputs">
+                    <label for="edit_passenger">Weight</label>
+                    <input type="number" id="edit_passenger">
+                </div>
+            </div>
+            <button class="save_button" id="save_button">Save</button>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="index.mjs"></script>
+</body>
 </html>
