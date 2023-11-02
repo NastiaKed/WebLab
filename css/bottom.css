@@ -1,0 +1,31 @@
+.bottom__line > .container {
+    display: flex;
+    justify-content: space-between;
+    background: #F16353;
+    width: 1600px;
+    height: 205px;
+}
+
+.url {
+    width: 165px;
+    height: 40px;
+    color: var(--Gray2, #F8F9FA);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px; /* 187.5% */
+    margin-top: 90px;
+    margin-left: 152px;
+    font-family: Rubik;
+}
+
+.logo {
+    margin-top: 81px;
+
+}
+
+.sm {
+    width: 170px;
+    height: 36px;
+    margin-right: 281px;
+    margin-top: 93px;
+}
