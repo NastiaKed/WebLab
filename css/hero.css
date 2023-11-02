@@ -1,0 +1,71 @@
+.hero__title {
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 100%; /* 100px */
+    color: #fff;
+    margin-left: 77px;
+    height: 300px;
+    margin-bottom: 60px;
+    font-family: DM Serif Display;
+}
+
+.hero__inner {
+    width: 45rem;
+}
+
+.hero{
+    height: 1103px;
+}
+
+.hero > .container {
+    background-image: url(../image/Mask\ group.png);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    height: 1103px;
+    margin: 0 auto;
+    /* width: 920px; */
+}
+
+.hero__car {
+    width: 811px;
+    height: 395px;
+    margin-top: 90px;
+    margin-left: -550px;
+    z-index: 1;
+    position: absolute;
+    
+}
+
+.hero__button {
+    border-radius: 5px;
+    background: #EE4D47;
+    width: 220px;
+    height: 60px;
+    /* margin-left: 77px; */
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.union {
+    margin-left: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    /* .container {
+        background-size: 100vw;
+    /* } */ */
+
+    .hero__title {
+        font-size: 70px;
+        text-align: start;
+        margin: 0;
+        margin-top: 10rem;
+    }
+
+    .hero__car {
+        /* display: none; */
+        margin-left: -700px;
+        margin-top: 30rem;
+    }
+}
