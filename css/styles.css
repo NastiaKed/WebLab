@@ -1,0 +1,21 @@
+@import "./normalize.min.css";
+@import "./globals.css";
+@import "./header.css";
+@import "./hero.css";
+@import "./intro.css";
+@import "./intro2.css";
+@import "./intro3.css";
+@import "./bottom.css";
+
+
+
+@font-face {
+    font-family: 'Rubik';
+    src: url();
+}
+
+button {
+    border: none;
+}
+
+
