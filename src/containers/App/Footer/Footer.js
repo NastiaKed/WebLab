@@ -7,13 +7,15 @@ import { Wrapper,
     IconBase 
 } from "./Footer.styled";
 
-import Icon, {
+import {
     TwitterOutlined,
     InstagramOutlined,
     LinkedinOutlined,
     YoutubeOutlined,
     ShopOutlined
 } from "@ant-design/icons";
+
+import { BrowserRouter as Router, NavLink } from "react-router-dom";
 
 
 const Footer = () => {

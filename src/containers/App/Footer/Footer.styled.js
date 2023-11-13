@@ -21,7 +21,6 @@ export const LogoWrapper=styled.div`
 
 export const IconBase=styled(Icon)`
     color: ${(color) => color};
-   
 `
 export const VerticalLine = styled.hr`
     

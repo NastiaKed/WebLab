@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 import { Button } from 'antd';
-import TablePicture from "../../Icons/nodeland-coffee-table-medium-brown__0974637_pe812499_s5.jpg.avif";
+// import TablePicture from "../../Icons/nodeland-coffee-table-medium-brown__0974637_pe812499_s5.jpg.avif";
 
 export const MainWrapper = styled.div`
     width:100%;

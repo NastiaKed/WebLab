@@ -8,7 +8,6 @@ import {
     StyledText,
     MainWrapper,
     CardWrapper,
-    ImageWrapper
 } from "./Home.styled"
 
 import CardItem from "../../components/CardItem/CardItem";
