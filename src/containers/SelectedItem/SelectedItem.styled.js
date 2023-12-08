@@ -12,6 +12,10 @@ export const StyledT = styled.div`
     display: block;
 `
 
+export const StyledInput = styled.input`
+    margin-left: 40px;
+`
+
 export const StyledB = styled.div`
     display: flex;
     margin-top: 35px;

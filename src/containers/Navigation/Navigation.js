@@ -9,23 +9,23 @@
 //     return(
 //         <Router>
 //             <LinkingWrapper>
-//                 <ul>
-//                     <li>
-//                         <NavLink to='/' >Home</NavLink>
-//                     </li>
-//                     <li>
-//                         <NavLink to='/catalog' >Catalog</NavLink>
-//                     </li>
-//                     <li>
-//                         <NavLink to='/cart' >Cart</NavLink>
-//                     </li>
-//                 </ul>
-//                 <Routes>
-//                     <Route path="/catalog" element={<Catalog/>}/>
-//                     <Route path="/cart" element={  <div>It is cart</div>}/>
-//                     <Route path="/" element={ <Home/>}/>
-//                     <Route path="/table/*" element={<SelectedItem/>}/>
-//                 </Routes>
+                // <ul>
+                //     <li>
+                //         <NavLink to='/' >Home</NavLink>
+                //     </li>
+                //     <li>
+                //         <NavLink to='/catalog' >Catalog</NavLink>
+                //     </li>
+                //     <li>
+                //         <NavLink to='/cart' >Cart</NavLink>
+                //     </li>
+                // </ul>
+                // <Routes>
+                //     <Route path="/catalog" element={<Catalog/>}/>
+                //     <Route path="/cart" element={  <div>It is cart</div>}/>
+                //     <Route path="/" element={ <Home/>}/>
+                //     <Route path="/table/*" element={<SelectedItem/>}/>
+                // </Routes>
 //             </LinkingWrapper>
 //         </Router>
 //     )

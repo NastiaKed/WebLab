@@ -21,6 +21,7 @@ const MainCatalog = ({filters, tablesList})=>{
             try {
                 console.log(filters)
                 const result = await getFilteredTables(filters);
+                console.log(result)
                 setFilteredTables(result);
                 setFiltersApplied(false)
             } catch (error) {

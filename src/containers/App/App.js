@@ -4,23 +4,38 @@ import Home from "../Home/Home";
 import Catalog from "../App/Catalog/Catalog";
 import SelectedItem from "../SelectedItem/SelectedItem";
 import shopping from "../../Shopping/shopping";
-import { CartPage } from "../App/CardItem/CartPage";
-import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
+import Cart from "./Card/Card";
+import { BrowserRouter as Router,Route,Routes, NavLink } from "react-router-dom";
 import { Provider } from "react-redux";
+import { LinkingWrapper } from "../Navigation/Navigation.styles";
+import Layout from "./Layout/Layout";
+
 
 
 const App = () => {
     return (
-        <Provider shopping={shopping}>
+        <Provider store={shopping}>
             <Router>
-                <div>
+                <Layout/>
+                <LinkingWrapper>
+                    <ul>
+                        <li>
+                            <NavLink to='/' >Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/catalog' >Catalog</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/cart' >Cart</NavLink>
+                        </li>
+                    </ul>
                     <Routes>
-                        <Route path="/" element = {<Home/>}/>
-                        <Route path="/catalog" element = {<Catalog/>}/>
-                        <Route path="/cart" element = {<CartPage/>}/>
-                        <Route path="/table/:id" element = {<SelectedItem/>}/>
+                        <Route path="/catalog" element={<Catalog/>}/>
+                        <Route path="/cart" element={<Cart/>}/>
+                        <Route path="/" element={ <Home/>}/>
+                        <Route path="/table/:id" element={<SelectedItem/>}/>
                     </Routes>
-                </div>
+                </LinkingWrapper>
             </Router>
         </Provider>
     );

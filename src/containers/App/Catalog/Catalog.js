@@ -2,7 +2,8 @@ import {React,useState, useEffect} from "react";
 import MainCatalog from "../../MainCatalog/MainCatalog";
 import CatalogFilters from "../Filter/CatalogFilters";
 import CircleLoader from "../../App/CircleLoader/CircleLoader";
-import CatalogHeader from "./CatalogHeader";
+import {ShoppingOutlined} from "@ant-design/icons";
+
 
 import { getAllTables } from "../../../server";
 
@@ -26,7 +27,6 @@ const Catalog = ()=>{
 
         return(
             <div>
-                <CatalogHeader/>
                 <CatalogFilters filters={filters} handleApplyFilter={handleApplyFilter}/>
                 {isLoading ? <CircleLoader/> : ''}
                 {/* <Filter/> */}

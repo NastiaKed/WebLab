@@ -7,7 +7,9 @@ import Picture2 from "../../Icons/image21.png";
 import axios from "axios";
 import { useEffect } from "react";
 import CircleLoader from "../App/CircleLoader/CircleLoader";
-import HomeHeader from '../Home/HomeHeader';
+import Layout from "../App/Layout/Layout";
+
+
 
 import {
     StyledButton,
@@ -59,7 +61,6 @@ const homeText = {
 
     return(
         <div>
-            <HomeHeader/>
             <MainWrapper>
             {isLoading ? <CircleLoader/> : ''}
                 <img style={{marginLeft:100,width:500,height:500}} src={Picture}/>

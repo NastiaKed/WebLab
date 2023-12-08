@@ -20,13 +20,15 @@ export const getAllTables = async () => {
 
 export const getFilteredTables = async ({ size, color, price, title }) => {
     const params = createUrl({size, color, price, title});
-    const response = await axios.get(FILTER_URL ,{params} );
+    console.log(params)
+    const response = await axios.get(`${FILTER_URL}${params}`);
+    console.log(response)
 
     return response.data;
     };
 
 
 export const getTablesById = async (itemId) =>{
-    const response = await axios.get(`BASE_URL/${itemId}`);
+    const response = await axios.get(`${BASE_URL}/${itemId}`);
     return response.data
 }
