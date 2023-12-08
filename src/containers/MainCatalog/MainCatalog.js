@@ -1,60 +1,63 @@
 import React from "react";
-import Table1 from "../../Icons/56121403SD00205_A2_803x602.jpg"
-import Table2 from "../../Icons/56121403SD00233_A2_803x602.jpg"
-import Table3 from "../../Icons/56121403SD00269_A2_803x602.jpg"
-import Table4 from "../../Icons/56121403SD00200_A2_803x602.jpg"
 import CardItem from "../../components/CardItem/CardItem";
-import { useState } from "react";
-
-
+import { useState, useEffect } from "react";
+import { getAllTables, getFilteredTables} from "../../server";
 import { CardWrapper } from "../Home/Home.styled";
+import CircleLoader from "../App/CircleLoader/CircleLoader";
+import {Button} from "antd";
 
+const MainCatalog = ({filters, tablesList})=>{
+    const [filtersApplied,setFiltersApplied] = useState(true)
+    const [isLoading, setIsLoading] = useState(false);
+    const [filteredTables, setFilteredTables] = useState(tablesList);
 
-const tables =[
-        {
-            title: "Dining table",
-            text: "Large dining table",
-            image: Table1,
-            price: 356,
-        },
-        {
-            title: "Desktop",
-            text: "A comfortable table for office work",
-            image: Table2,
-            price: 645,
-        },
-        {
-            title: "Coffee table",
-            text: "A small and comfortable table in a cafe",
-            image: Table3,
-            price: 876,
-        },
-        {
-        title: "Office table",
-        text: "Incredible feelings",
-        image: Table4,
-        price: 865,
-        },
+    const handleApplyFilter = () => {
+        setFiltersApplied(true)
+    }
 
-];
-const MainCatalog = ()=>{
-        const [cards,setCards] = useState(tables)
+    useEffect(() => {
+        
+        const fetchFilterTables = async () => {
+            try {
+                console.log(filters)
+                const result = await getFilteredTables(filters);
+                setFilteredTables(result);
+                setFiltersApplied(false)
+            } catch (error) {
+                console.error("filtering error:", error);
+            }
+        };
+
+        if (filtersApplied) {
+            fetchFilterTables();
+            setFiltersApplied(false)
+        }
+    }, [filters, filtersApplied]);
 
         return(
-        <CardWrapper>
-        {cards.map(({title,image,text,price},idx)=>(
-            <CardItem 
-                key={idx}
-                title={title}
-                text={text}
-                image = {image}
-                price={price}
-                idx={idx}
-            />
-        ))}
-        </CardWrapper>
-        )
-        
+
+            <div>
+                <div style={{display: "flex", justifyContent: "right", marginBottom: 80, marginRight: 150}}>
+                    <Button onClick={handleApplyFilter}>Apply</Button>
+                </div>
+
+            <CardWrapper>
+            {filteredTables.map((table)=>(
+                <CardItem 
+                    key={table.id}
+                    title={table.title}
+                    text={table.text}
+                    image = {table.image}
+                    price={table.price}
+                    size={table.size}
+                    color={table.color}
+                    id={table.id}
+                />
+            ))}
+            </CardWrapper>
+            {isLoading ?<CircleLoader/>:""}
+        </div>
+    )
 }
 
 export default MainCatalog
